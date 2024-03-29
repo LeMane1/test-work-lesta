@@ -1,0 +1,67 @@
+@import 'bootstrap';
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap');
+
+/* Reset */
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+}
+
+* {
+	margin: 0;
+	padding: 0;
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+	display: block;
+	max-width: 100%;
+}
+
+input,
+button,
+textarea,
+select {
+	font: inherit;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	overflow-wrap: break-word;
+	margin: 0;
+}
+
+html {
+	scroll-behavior: smooth;
+}
+
+/* Common */
+
+body {
+	font-family: 'Montserrat', 'Helvetica Neue', sans-serif;
+	font-weight: 500;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	line-height: 1.5;
+}
+
+.regular {
+	font-weight: 500;
+}
+
+.semi-bold {
+	font-weight: 600;
+}
+
+.bold {
+	font-weight: 700;
+}

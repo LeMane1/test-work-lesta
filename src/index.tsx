@@ -1,15 +1,32 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import './index.css';
+import './styles/index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import {
+  ApolloClient,
+  InMemoryCache,
+  ApolloProvider,
+  createHttpLink
+} from '@apollo/client';
+
+const link = createHttpLink({
+  uri: 'https://vortex.korabli.su/api/graphql/glossary/'
+})
+
+const client = new ApolloClient({
+  cache: new InMemoryCache(),
+  link: link
+})
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
 );
 root.render(
   <React.StrictMode>
-    <App />
+    <ApolloProvider client={client}>
+      <App />
+    </ApolloProvider>
   </React.StrictMode>
 );
 
